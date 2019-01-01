@@ -1,6 +1,8 @@
 # burgers
 
-# Node Express Handlebars
+This assignment was a challenge to understand, and was missing some of the files and file structure in the instructions. Luckily one of the in class activities we had, contained the clues needed to complete the assignment. Below are the instructions for the assignment as provided with what I added to get it working.
+
+## Node Express Handlebars
 
 ### Overview
 
