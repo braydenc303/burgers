@@ -117,16 +117,16 @@ When trying to connect remotely to your Heroku database on an open network such 
 1. Inside your `burger` directory, create a folder named `controllers`.
 
 2. In `controllers`, create the `burgers_controller.js` file.
-<!-- START HERE -->
+<!-- Done -->
 3. Inside the `burgers_controller.js` file, import the following:
 
    * Express
    * `burger.js`
-
+<!-- Done -->
 4. Create the `router` for the app, and export the `router` at the end of your file.
 
 #### View setup
-
+<!-- Structure complete, as well as main and index.handlebars. -->
 1. Inside your `burger` directory, create a folder named `views`.
 
    * Create the `index.handlebars` file inside `views` directory.
@@ -140,6 +140,18 @@ When trying to connect remotely to your Heroku database on an open network such 
      * Setup the `index.handlebars` to have the template that Handlebars can render onto.
 
      * Create a button in `index.handlebars` that will submit the user input into the database.
+
+#### Assets
+<!-- Structure complete. Still need to add content to the css and js files-->
+1. Inside your `burger` directory, create a folder named `public`. 
+
+    * Create an `assets` folder inside the `public` directory.
+
+    * Create  `css`, `img`, and `js` folders inside the assets directory.
+
+    * Create a `burger_style.css` file inside the `css` directory.
+
+    * Create a `burgers.js` file inside the `js` directory and create your ajax calls within that.
 
 #### Directory structure
 
