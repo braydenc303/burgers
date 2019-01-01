@@ -1,0 +1,26 @@
+body {
+    align-content: center;
+    text-align: center;
+    background: burlywood;
+}
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+    height: 200px;
+}
+
+#main {
+    position: relative;
+}
+
+#ready {
+    position: absolute;
+}
+
+#devoured {
+    position: absolute;
+    right: 0;
+}

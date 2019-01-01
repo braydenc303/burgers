@@ -2,33 +2,41 @@
 
 <img src="/assets/img/Burger-Transparent-Images.png" alt="Burger illustration." id="logo">
 
-<h2>Burgers ready to eat!</h2>
+<div id="main">
+    <div id="ready">
+        <h2>Burgers ready to eat!</h2>
 
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-            {{> burgers/burger-block devoured=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Burgers served!</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-            {{> burgers/burger-block devoured=false}}
-        {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Build Your Own Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="byob">What toppings would you like?</label>
-        <input type="text" id="byob" name="name">
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+            {{/each}}
+        </ul>
     </div>
 
-    <button type="submit">Build Your Burger</button>
-</form>
+    <div id="devoured">
+        <h2>Burgers served!</h2>
+
+        <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{> burgers/burger-block devoured=false}}
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div id="byo">
+        <h2>Build Your Own Burger!</h2>
+        <form class="create-form">
+
+            <div class="form-group">
+                <label for="byob">What toppings would you like?</label>
+                <input type="text" id="byob" name="name">
+            </div>
+
+            <button type="submit">Build Your Burger</button>
+        </form>
+    </div>
+</div>
