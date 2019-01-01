@@ -36,7 +36,7 @@ function objToSql(ob) {
 var orm = {
     //This function will be used to query the database to display all of the burgers.
     selectAll: function(tableInput, cb) {
-        var queryString = "SELECT * FROM" + tableInput + ";";
+        var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result){
             if (err) throw err;
             cb(result);
@@ -44,7 +44,7 @@ var orm = {
     },
     //This function will be used to add a new burger to the database
     insertOne: function(table, cols, vals, cb) {
-        var queryString = "INSERT INTO" + table;
+        var queryString = "INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();
@@ -62,9 +62,9 @@ var orm = {
     },
     //This function will be used to change the boolean value of devoured to true. An example of objColVals would be {devoured: true}
     updateOne: function(table, objColVals, condition, cb) {
-        var queryString = "UPDATE" + table;
+        var queryString = "UPDATE " + table;
         // e.g. "UPDATE burgers SET devoured = true WHERE id = '1'"
-        queryString += "SET ";
+        queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
@@ -72,6 +72,19 @@ var orm = {
         console.log(queryString);
         connection.query(queryString, function(err, result){
             if(err) throw err;
+            cb(result);
+        });
+    },
+    delete: function(table, condition, cb) {
+        var queryString = "DELETE FROM " + table;
+        queryString += " WHERE ";
+        queryString += condition;
+
+        connection.query(queryString, function(err, result) {
+            if (err) {
+                throw err;
+            }
+
             cb(result);
         });
     }
