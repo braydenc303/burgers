@@ -1,5 +1,4 @@
 body {
-    align-content: center;
     text-align: center;
     background: burlywood;
 }
@@ -12,15 +11,20 @@ img {
     height: 200px;
 }
 
-#main {
-    position: relative;
-}
 
-#ready {
-    position: absolute;
-}
 
-#devoured {
-    position: absolute;
-    right: 0;
+@media only screen and (min-width: 1350px) {
+
+    #main {
+        position: relative;
+    }
+    
+    #ready {
+        position: absolute;
+    }
+    
+    #devoured {
+        position: absolute;
+        right: 0;
+    }
 }
